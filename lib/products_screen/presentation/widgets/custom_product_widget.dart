@@ -16,9 +16,9 @@ class CustomProductWidget extends StatelessWidget {
 
   const CustomProductWidget(
       {super.key,
-      required this.width,
-      required this.height,
-      required this.product});
+        required this.width,
+        required this.height,
+        required this.product});
 
   String truncateTitle(String title) {
     List<String> words = title.split(' ');
@@ -66,9 +66,9 @@ class CustomProductWidget extends StatelessWidget {
                   width: double.infinity,
                   fit: BoxFit.cover,
                   placeholder: (context, url) =>
-                      const Center(child: CircularProgressIndicator()),
+                  const Center(child: CircularProgressIndicator()),
                   errorWidget: (context, url, error) =>
-                      const Icon(Icons.error),
+                  const Icon(Icons.error),
                 ),
                 Positioned(
                     top: height * 0.01,
@@ -142,7 +142,7 @@ class CustomProductWidget extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Review (${product.rating})",
+                              "Review (${product.rating?.rate})",
                               style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 color: ColorManager.textColor,
